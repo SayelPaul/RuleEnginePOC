@@ -1,0 +1,26 @@
+package KieRule;
+import com.test.ruleengines.api.Order;
+
+rule "HDFC"
+
+when
+orderObject : Order(cardType=="HDFC");
+then
+System.out.println("Discount is 25%");
+end;
+
+rule "ICICI"
+
+when
+orderObject : Order(cardType=="ICICI");
+then
+System.out.println("Discount is 15%");
+end;
+
+rule "DBS"
+
+when
+orderObject : Order(cardType=="SBI");
+then
+System.out.println("Discount is 20%");
+end;
